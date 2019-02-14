@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
 
             // Menggunakan elvis operator ?: "default" agar tidak bernilai null
             // tapi akan memberikan nilai default dari penggunaaan elvis operator
-            val panjang = edtPanjang.text.toString().toInt()
-            val lebar = edtLebar.text.toString().toInt()
+            val panjang = edtPanjang.text.toString().toIntOrNull() ?: 0
+            val lebar = edtLebar.text.toString().toIntOrNull() ?: 0
 
             val hasil = panjang * lebar
             txtHasil.text = hasil.toString()
